@@ -45,7 +45,7 @@
 			<img src="http://oebmi6usx.bkt.clouddn.com/lzq1.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">倔强的豆芽</a></h1>
+		  <h1 class="header-author"><a href="/">PaPaXi</a></h1>
 		</hgroup>
 		
 
@@ -99,7 +99,7 @@
 				<img src="http://oebmi6usx.bkt.clouddn.com/lzq1.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">倔强的豆芽</h1>
+			  <h1 class="header-author js-header-author">PaPaXi</h1>
 			</hgroup>
 			
 			
@@ -162,19 +162,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>打开yilia主题在你的电脑上的文件目录，打开themes\yilia\layout_partial\post。新建文件netease.ejs.写入代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">&lt;!-- 网易云跟帖评论插件通用代码 --&gt;</div><div class="line">&lt;div class=&quot;netease&quot;&gt;</div><div class="line">	&lt;div id=&quot;cloud-tie-wrapper&quot; class=&quot;cloud-tie-wrapper&quot;&gt;&lt;/div&gt;</div><div class="line">	&lt;script src=&quot;https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js&quot;&gt;&lt;/script&gt;</div><div class="line">	&lt;script&gt;</div><div class="line">	var cloudTieConfig = &#123;</div><div class="line">	  url: document.location.href, </div><div class="line">	  sourceId: &quot;&quot;,</div><div class="line">	  productKey: &quot;&lt;%= theme.gentie_productKey %&gt;&quot;,</div><div class="line">	  target: &quot;cloud-tie-wrapper&quot;</div><div class="line">	&#125;;</div><div class="line">	var yunManualLoad = true;</div><div class="line">	Tie.loader(&quot;aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s&quot;, true);</div><div class="line">	&lt;/script&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;!-- 网易云跟帖代码结束 --&gt;</div></pre></td></tr></table></figure>
-<p><strong>注意</strong>：productKey: “&lt;%= theme.gentie_productKey %&gt;”,</p>
-<p>找到目录themes\yilia\layout_partial 下的 article.ejs 文件中的多说评论模块</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">  &lt;% if (!index)&#123; %&gt;</div><div class="line">  &lt;% if (theme.duoshuo &amp;&amp; post.comments)&#123; %&gt;</div><div class="line">  &lt;%- partial(&apos;post/duoshuo&apos;, &#123;</div><div class="line">      key: post.slug,</div><div class="line">      title: post.title,</div><div class="line">      url: config.url+url_for(post.path)</div><div class="line">    &#125;) %&gt;</div><div class="line">  &lt;% &#125; else &#123; %&gt;</div><div class="line">    &lt;div class=&quot;duoshuo&quot;&gt;&lt;/div&gt;</div><div class="line">  &lt;% &#125; %&gt;</div><div class="line">&lt;% &#125; %&gt;</div></pre></td></tr></table></figure>
-<p>在它下面加上以下代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">  &lt;% if (!index)&#123; %&gt;</div><div class="line">  &lt;% if (theme.gentie_productKey &amp;&amp; post.comments)&#123; %&gt;</div><div class="line">  &lt;%- partial(&apos;post/netease&apos;) %&gt;</div><div class="line">  &lt;% &#125; else &#123; %&gt;</div><div class="line">    &lt;div class=&quot;netease&quot;&gt;&lt;/div&gt;</div><div class="line">  &lt;% &#125; %&gt;</div><div class="line">&lt;% &#125; %&gt;</div></pre></td></tr></table></figure>
-<p>在yilia的配置文件_config.yml中加入以下配置：</p>
-<p>gentie_productKey: xxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-<p>即：你的网易云跟帖生成的productKey</p>
-<p>OK.到此设置结束。赶快去重新发布试试吧。</p>
-<p><strong>注意</strong>：<br>使用网易云跟帖需要有自己的独立域名</p>
-<p>所以 如果确定自己完全按照我的步骤完成，那本地测试的时候可以查看一下静态页面的源代码（Chrome浏览器的查看方法是：直接在网页上右键–&gt;检查，其他浏览器的查看方法自己百度），如果在文章页面的底部有网易云跟帖的相关代码，那就放心的提交上传到自己的托管服务器（github）上吧。</p>
-
+        
+          <a class="article-more-a" href="/2017/04/02/hexo/yilia主题配合云跟帖/#more">more >></a>
+        
       
 
       
@@ -897,7 +887,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2017 倔强的豆芽
+    		&copy; 2017 PaPaXi
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -985,11 +975,11 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">-hexo</a>
+                <a href="javascript:void(0)" class="js-tag color5">-git</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">-git</a>
+                <a href="javascript:void(0)" class="js-tag color1">-hexo</a>
               </li>
              
               <li class="article-tag-list-item">

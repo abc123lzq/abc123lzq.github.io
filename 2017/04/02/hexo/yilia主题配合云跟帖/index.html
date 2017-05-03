@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>hexo -评论插件 | 豆芽</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="打开yilia主题在你的电脑上的文件目录，打开themes\yilia\layout_partial\post。新建文件netease.ejs.写入代码： 12345678910111213141516&amp;lt;!-- 网易云跟帖评论插件通用代码 --&amp;gt;&amp;lt;div class=&amp;quot;netease&amp;quot;&amp;gt;	&amp;lt;div id=&amp;quot;cloud-tie-wrappe">
+  <meta name="description" content="打开yilia主题在你的电脑上的文件目录，打开themes\yilia\layout_partial\post。新建文件netease.ejs.写入代码：">
 <meta name="keywords" content="-hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo -评论插件">
 <meta property="og:url" content="http://yoursite.com/2017/04/02/hexo/yilia主题配合云跟帖/index.html">
 <meta property="og:site_name" content="豆芽">
-<meta property="og:description" content="打开yilia主题在你的电脑上的文件目录，打开themes\yilia\layout_partial\post。新建文件netease.ejs.写入代码： 12345678910111213141516&amp;lt;!-- 网易云跟帖评论插件通用代码 --&amp;gt;&amp;lt;div class=&amp;quot;netease&amp;quot;&amp;gt;	&amp;lt;div id=&amp;quot;cloud-tie-wrappe">
-<meta property="og:updated_time" content="2017-05-03T09:43:23.958Z">
+<meta property="og:description" content="打开yilia主题在你的电脑上的文件目录，打开themes\yilia\layout_partial\post。新建文件netease.ejs.写入代码：">
+<meta property="og:updated_time" content="2017-05-03T09:45:19.120Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo -评论插件">
-<meta name="twitter:description" content="打开yilia主题在你的电脑上的文件目录，打开themes\yilia\layout_partial\post。新建文件netease.ejs.写入代码： 12345678910111213141516&amp;lt;!-- 网易云跟帖评论插件通用代码 --&amp;gt;&amp;lt;div class=&amp;quot;netease&amp;quot;&amp;gt;	&amp;lt;div id=&amp;quot;cloud-tie-wrappe">
+<meta name="twitter:description" content="打开yilia主题在你的电脑上的文件目录，打开themes\yilia\layout_partial\post。新建文件netease.ejs.写入代码：">
   
     <link rel="alternative" href="/atom.xml" title="豆芽" type="application/atom+xml">
   
@@ -50,7 +50,7 @@
 			<img src="http://oebmi6usx.bkt.clouddn.com/lzq1.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">倔强的豆芽</a></h1>
+		  <h1 class="header-author"><a href="/">PaPaXi</a></h1>
 		</hgroup>
 		
 
@@ -104,7 +104,7 @@
 				<img src="http://oebmi6usx.bkt.clouddn.com/lzq1.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">倔强的豆芽</h1>
+			  <h1 class="header-author js-header-author">PaPaXi</h1>
 			</hgroup>
 			
 			
@@ -165,6 +165,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>打开yilia主题在你的电脑上的文件目录，打开themes\yilia\layout_partial\post。新建文件netease.ejs.写入代码：</p>
+<a id="more"></a>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">&lt;!-- 网易云跟帖评论插件通用代码 --&gt;</div><div class="line">&lt;div class=&quot;netease&quot;&gt;</div><div class="line">	&lt;div id=&quot;cloud-tie-wrapper&quot; class=&quot;cloud-tie-wrapper&quot;&gt;&lt;/div&gt;</div><div class="line">	&lt;script src=&quot;https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js&quot;&gt;&lt;/script&gt;</div><div class="line">	&lt;script&gt;</div><div class="line">	var cloudTieConfig = &#123;</div><div class="line">	  url: document.location.href, </div><div class="line">	  sourceId: &quot;&quot;,</div><div class="line">	  productKey: &quot;&lt;%= theme.gentie_productKey %&gt;&quot;,</div><div class="line">	  target: &quot;cloud-tie-wrapper&quot;</div><div class="line">	&#125;;</div><div class="line">	var yunManualLoad = true;</div><div class="line">	Tie.loader(&quot;aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s&quot;, true);</div><div class="line">	&lt;/script&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;!-- 网易云跟帖代码结束 --&gt;</div></pre></td></tr></table></figure>
 <p><strong>注意</strong>：productKey: “&lt;%= theme.gentie_productKey %&gt;”,</p>
 <p>找到目录themes\yilia\layout_partial 下的 article.ejs 文件中的多说评论模块</p>
@@ -291,7 +292,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2017 倔强的豆芽
+    		&copy; 2017 PaPaXi
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -379,11 +380,11 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">-hexo</a>
+                <a href="javascript:void(0)" class="js-tag color5">-git</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">-git</a>
+                <a href="javascript:void(0)" class="js-tag color1">-hexo</a>
               </li>
              
               <li class="article-tag-list-item">
