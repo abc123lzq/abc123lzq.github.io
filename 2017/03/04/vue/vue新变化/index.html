@@ -244,57 +244,6 @@
       
 
       
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
-        </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/03/04/vue/vue新变化/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
       <div class="clearfix"></div>
     </div>
   </div>
@@ -325,18 +274,29 @@
 
 
   
-  
-  
+
+
+
+<!-- 网易云跟帖评论插件通用代码 -->
+<div class="netease">
   <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
-<script>
-  var cloudTieConfig = {
-    url: "http://yoursite.com/2017/03/04/vue/vue新变化/", 
-    sourceId: "vue/vue新变化",
-    productKey: "83427ba7cc59469392750cf6e4a88d52",
-    target: "cloud-tie-wrapper"
-  };
-</script>
-<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+  <script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+  <script>
+    var cloudTieConfig = {
+      url: document.location.href,
+      sourceId: "",
+      productKey: "83427ba7cc59469392750cf6e4a88d52",
+      target: "cloud-tie-wrapper"
+    };
+    var yunManualLoad = true;
+    Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
+  </script>
+</div>
+<!-- 网易云跟帖代码结束 -->
+
+
+
+
   
 
   
@@ -359,6 +319,8 @@
     </div>
   </div>
 </footer>
+
+
     </div>
     <script>
 	var yiliaConfig = {
