@@ -6,19 +6,14 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>jq-源码解析 | 豆芽</title>
+  <title>Archives: 2017/4 | 豆芽</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="jq库全部写在匿名函数自执行，这样里面的东西都是局部的不会污染全局环境 123456789101112(function () &amp;#123;      var str = &amp;apos;这是jq函数&amp;apos;      function $() &amp;#123;          console.log(str)      &amp;#125;      window.$ = $;//最后挂在window接口">
-<meta name="keywords" content="-jq">
-<meta property="og:type" content="article">
-<meta property="og:title" content="jq-源码解析">
-<meta property="og:url" content="http://yoursite.com/2017/02/03/jq/jq2.03-2013版本/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="豆芽">
+<meta property="og:url" content="http://yoursite.com/archives/2017/04/index.html">
 <meta property="og:site_name" content="豆芽">
-<meta property="og:description" content="jq库全部写在匿名函数自执行，这样里面的东西都是局部的不会污染全局环境 123456789101112(function () &amp;#123;      var str = &amp;apos;这是jq函数&amp;apos;      function $() &amp;#123;          console.log(str)      &amp;#125;      window.$ = $;//最后挂在window接口">
-<meta property="og:updated_time" content="2017-05-03T06:18:01.915Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="jq-源码解析">
-<meta name="twitter:description" content="jq库全部写在匿名函数自执行，这样里面的东西都是局部的不会污染全局环境 123456789101112(function () &amp;#123;      var str = &amp;apos;这是jq函数&amp;apos;      function $() &amp;#123;          console.log(str)      &amp;#125;      window.$ = $;//最后挂在window接口">
+<meta name="twitter:title" content="豆芽">
   
     <link rel="alternative" href="/atom.xml" title="豆芽" type="application/atom+xml">
   
@@ -144,189 +139,71 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-jq/jq2.03-2013版本" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      jq-源码解析
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/04/02/hexo/yilia主题配合云跟帖/" class="archive-article-date">
+  	<time datetime="2017-04-02T15:02:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-02</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/04/02/hexo/yilia主题配合云跟帖/">hexo -评论插件</a>
     </h1>
   
 
-        
-        <a href="/2017/02/03/jq/jq2.03-2013版本/" class="archive-article-date">
-  	<time datetime="2017-02-03T15:02:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>jq库全部写在匿名函数自执行，这样里面的东西都是局部的不会污染全局环境</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">(function () &#123;</div><div class="line">      var str = &apos;这是jq函数&apos;</div><div class="line"></div><div class="line">      function $() &#123;</div><div class="line">          console.log(str)</div><div class="line">      &#125;</div><div class="line"></div><div class="line">      window.$ = $;//最后挂在window接口上就能访问了！</div><div class="line">  &#125;)();</div><div class="line"></div><div class="line"></div><div class="line">  $();//这是jq函数</div></pre></td></tr></table></figure>
-<a id="more"></a>
-<p><strong>区块行码分析</strong></p>
-<blockquote>
-<pre><code>(function () {
-    (21,49)=&gt; 定义了一些变量和函数 ==&gt;jQuery = fn;
-
-    (96,283)=&gt;jQuery.prototype， 给jq的原型上添加一些属性和方法==&gt;jq就是个面向对象；
-
-    (285，347)=&gt;jQuery.extend=fn，jq的继承方法==&gt;利用继承可以灵活的扩展；
-
-    (349,817)=&gt;jQuery.extend(),扩展一些工具方法==&gt;有了继承就可以扩展方法了俗称工具；
-
-    (877,2856)=&gt;Sizzle：第三方库：作用复杂选择器的实现==&gt;各种选择器、顾虑器都写在这两千多行里；
-
-    (2880,3042)=&gt;jQuery.Callbacks:回调对象==&gt;函数的一个统一管理添加删改功能等；
-
-    (3043,3183)=&gt; Deferred:fn 延迟对象==&gt;对异步的统一管理，一些逻辑顺序的执行先后；
-
-    (3184，3295)=&gt;jQuery.support：功能检测==&gt;判断游览器版本，不如判断功能能不能实现；
-
-    (3308,3652)=&gt;Data()方法=&gt;缓存数据一般是数据，因为对象会内存泄漏；
-
-    (3653,3797)=&gt;queue()队列管理==&gt;如jq运动，肯定要按队列来进行；
-
-    (3803,4299)=&gt;attr()、prop()、addClass()等==&gt;队元素属性的操作；
-
-    (4300,5128)=&gt;on()、trigger()等：==&gt;事件操作的相关方法；
-
-    (5140,6057)=&gt;DOM操作：添加 删除 获取 筛选 包装等；
-
-    (6058,6620)=&gt;css():样式操作==&gt;各种样式兼容处理；
-
-    (6621,7854)=&gt; 提交的数据和ajax():主要是针对ajax的各种功能；
-
-    (7855,8584)=&gt;animate():运动的方法；show()、hide()等；
-
-    (8585,8792)=&gt;offset() 等：==&gt;位置和尺寸的方法；
-
-    (8804,8821)=&gt;jq支持模块的模式
-
-    (8826)=&gt;window.jQuery = window.$ = jQuery==&gt;挂载到window接口上;
-})();
-</code></pre></blockquote>
-<p>一开始就传window，因为window是最顶端，所以查找速度慢，<br>第二压缩版很有用，window变成e这也是压缩…</p>
-<p>第二个参数undefined:这个在某些游览器会被修改掉，所以为了防止其他在进行修改只要当参数传入</p>
-<p>最终就是这个函数库里面想用这个两个参数，最优先是找这两个，而不是找外边的！</p>
-<p>jq采用”use strict”; 严格模式，我靠真规范，不过jq不推荐我们使用，因为兼容差！！！ 所以注释不要去掉！</p>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">-jq</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">-hexo</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/-jquery/" class="article-tag-list-link color3">-jquery</a>
+        			<a href="/categories/-hexo/" class="article-tag-list-link color1">-hexo</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2017/03/01/js/jsonp/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          javaScript - 跨域之jsonp
-        
-      </div>
-    </a>
   
   
-    <a href="/2017/01/12/es6/ES6基础篇-字符串扩展/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">ES6-字符串扩展</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-
-
-
+    </div></section>
   
 
-
-
-<!-- 网易云跟帖评论插件通用代码 -->
-<div class="netease">
-  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
-  <script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
-  <script>
-    var cloudTieConfig = {
-      url: document.location.href,
-      sourceId: "",
-      productKey: "83427ba7cc59469392750cf6e4a88d52",
-      target: "cloud-tie-wrapper"
-    };
-    var yunManualLoad = true;
-    Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
-  </script>
-</div>
-<!-- 网易云跟帖代码结束 -->
-
-
-
-
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -351,8 +228,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
