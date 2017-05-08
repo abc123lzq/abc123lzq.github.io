@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/01/01/git/github前端必备技能-GitHub/index.html">
 <meta property="og:site_name" content="豆芽">
 <meta property="og:description" content="一、什么是git 1.git：工具，版本控制 2.github：网站、社交平台、开源项目、远程仓库">
-<meta property="og:updated_time" content="2017-05-03T05:59:25.106Z">
+<meta property="og:updated_time" content="2017-05-04T09:55:09.610Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="玩转github">
 <meta name="twitter:description" content="一、什么是git 1.git：工具，版本控制 2.github：网站、社交平台、开源项目、远程仓库">
@@ -85,6 +85,8 @@
 		        
 					<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/dou-ya-17-53" title="zhihu"><i class="icon-zhihu"></i></a>
 		        
+					<a class="segmentfault" target="_blank" href="https://segmentfault.com/u/douya_590bd9c6681f4" title="segmentfault"><i class="icon-segmentfault"></i></a>
+		        
 			</div>
 		</nav>
 	</header>		
@@ -121,6 +123,8 @@
 						<a class="weibo" target="_blank" href="http://weibo.com/3704697857/profile?topnav=1&wvr=6" title="weibo"><i class="icon-weibo"></i></a>
 			        
 						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/dou-ya-17-53" title="zhihu"><i class="icon-zhihu"></i></a>
+			        
+						<a class="segmentfault" target="_blank" href="https://segmentfault.com/u/douya_590bd9c6681f4" title="segmentfault"><i class="icon-segmentfault"></i></a>
 			        
 				</div>
 			</nav>
@@ -190,6 +194,12 @@
 <p> cd到路径</p>
 <p> git clone http:….   克隆下就可以了</p>
 </blockquote>
+<ol>
+<li>提醒神器： git status</li>
+</ol>
+<blockquote>
+<p>不过关操作到那步想要哪一步 只要输入git status然后看下Changes to be committed:后的提醒 就可对上下步进行提醒！ </p>
+</blockquote>
 <p><strong>五、 本地三大区</strong></p>
 <ol>
 <li><p>工作区 :每个参与的开发者的本地代码</p>
@@ -218,25 +228,25 @@
 </li>
 <li><p>git add . ：  全部提交 添加到缓存区</p>
 </li>
-<li><p>git commit -a  -m “sb.js” 指定文件提交到版本库</p>
+<li><p>git commit -m “sb.js” 指定文件提交到版本库</p>
 </li>
-<li><p>git commit ： 全部提交到版本库</p>
+<li><p>git commit -m ‘你妹’ ：全部提交到版本库</p>
 </li>
-<li><p>git commit -m ‘你妹’ :git 工具必须要添加提交信息才能用！</p>
+<li><p>git commit -a  -m ‘hh123’： 提交到暂存区和版本库，这个更方便 </p>
 </li>
 </ol>
 <p><strong>撤销</strong></p>
 <ol>
-<li><p>git reset Head sb.js: 从暂存区撤销回工作区</p>
+<li><p>git reset Head sb.js: 暂存区测回到回工作区的现状</p>
 </li>
-<li><p>git checkout –sb.js : 从工作区撤销所有修改到版本区的最新状态</p>
+<li><p>git checkout – sb.js : 工作区撤回到版本区的最新状态</p>
 </li>
 <li><p>git commit -m ‘sb.js and tx.js’ –amend ：本来是想提交多个文件不小心先提交了一部分，这个命令就是撤销在提交全部</p>
 </li>
 </ol>
 <p><strong>删除</strong></p>
 <ol>
-<li><p>git rm  sb.js :工作区删除了文件，该命令会把暂存区也给删掉   </p>
+<li><p>git rm  sb.js :删除该分件后系统在判断工作区删除了哪些文件，该命令会把暂存区也给删掉   </p>
 </li>
 <li><p>git rm -f sb.js: 直接删除工作区和暂存区</p>
 </li>
@@ -271,7 +281,9 @@
 <hr>
 <p><strong>九、多人合作冲突问题</strong></p>
 <blockquote>
-<p>每个人在开发的的时候都得同步更新好在进行开发 这样可以避免很多冲突。</p>
+<p>创建分支的目的有两种:一个快速开关的分支如修改bug，这样每次修改完后就可以删掉分支下次要改的时候又能在主分支上更新代码在开分支只要记得更新开关冲突就很少。</p>
+<p>另一种是长期开发的，一般都是模块化，主分支的变动不会影响到这个开发分支，他们相互不牵连，这样的话冲突也是很少！</p>
+<p>每个人在开发的的时候都得同步更新git pull 好在进行开发 这样可以避免很多冲突。</p>
 <p>当小伙伴们版本库push到远端仓库时发现冲突，这时候就要拉去远端仓库代码来比较差异</p>
 </blockquote>
 <p>方法一：手动合并 </p>
@@ -282,7 +294,7 @@
 <p>git push origin master ：最后扔到远端仓库</p>
 <p>方法二自动合并：</p>
 <p>git pull ： 自动合并，在进行删改</p>
-<p>git commit  -a -m ‘sb.js’ ： 改完后扔到版本号</p>
+<p>git commit  -a -m ‘sb.js’ ： 改完后扔到暂存区和版本号</p>
 <p>git push origin master ：最后扔到远端仓库</p>
 <p><strong>十、 开源项目协作，如jq vue</strong></p>
 <p>两不步骤fork  、 pull requests </p>
@@ -306,14 +318,14 @@
 </li>
 <li><p>git branch –merged:查看当前主分支所合并的分支，</p>
 </li>
-<li><p>git branch –no–merged:查看当前主分支下还没有合并的分支</p>
+<li><p>git branch –no-merged:查看当前主分支下还没有合并的分支</p>
 </li>
 <li><p>git branch -d new1：可以删除主分支下已合并的分支，不能删除还没合并的，</p>
 </li>
-<li><p>git branch -D：大写D是强制删除还没有合并的，记得分支管理任务完了就得删除！</p>
+<li><p>git branch -D new1：大写D是强制删除还没有合并的，记得分支管理任务完了就得删除！</p>
 </li>
 </ol>
-<p><strong>十二、小伙伴自己的分支pussh到远端仓库</strong></p>
+<p><strong>十二、小伙伴自己的分支push到远端仓库</strong></p>
 <ol>
 <li><p>GitHub上分支选项上会自动多了一个分支！这时候就可以在页面上切换分支查看代码！</p>
 </li>
@@ -326,7 +338,7 @@
 <ol>
 <li><p>git tag v1.0 ：打标签</p>
 </li>
-<li><p>git push上去 就有里程碑，并且可以下载对应版本代码！</p>
+<li><p>git push origin v1.0<br>就有里程碑，并且可以下载对应版本代码！</p>
 </li>
 <li><p>github上也是可以直接打印里程碑的</p>
 </li>
@@ -556,11 +568,11 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">-hexo</a>
+                <a href="javascript:void(0)" class="js-tag color4">-jq</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">-jq</a>
+                <a href="javascript:void(0)" class="js-tag color1">-hexo</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -651,7 +663,7 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">此主题套用yilia</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">PaPaXi 啪啪兮 (*^__^*)</div>
   	  	
     	</section>
     
