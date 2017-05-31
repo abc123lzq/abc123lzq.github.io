@@ -6,19 +6,14 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>vue - 自定义 | 豆芽</title>
+  <title>Tag: -思路 | 豆芽</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1. 过虑器的变化作者把所有系统自带的全部删除了-你大爷!还好的是json过滤2.0自己添加了！还有你可以自定义过滤器！">
-<meta name="keywords" content="-vue">
-<meta property="og:type" content="article">
-<meta property="og:title" content="vue - 自定义">
-<meta property="og:url" content="http://yoursite.com/2017/03/11/vue/vue-自定义/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="豆芽">
+<meta property="og:url" content="http://yoursite.com/tags/思路/index.html">
 <meta property="og:site_name" content="豆芽">
-<meta property="og:description" content="1. 过虑器的变化作者把所有系统自带的全部删除了-你大爷!还好的是json过滤2.0自己添加了！还有你可以自定义过滤器！">
-<meta property="og:updated_time" content="2017-05-03T07:02:45.139Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="vue - 自定义">
-<meta name="twitter:description" content="1. 过虑器的变化作者把所有系统自带的全部删除了-你大爷!还好的是json过滤2.0自己添加了！还有你可以自定义过滤器！">
+<meta name="twitter:title" content="豆芽">
   
     <link rel="alternative" href="/atom.xml" title="豆芽" type="application/atom+xml">
   
@@ -148,165 +143,71 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-vue/vue-自定义" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      vue - 自定义
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/04/12/thinkings/思路境界-jq阅读源码/" class="archive-article-date">
+  	<time datetime="2017-04-12T15:02:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-12</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/04/12/thinkings/思路境界-jq阅读源码/">h5属性大全4</a>
     </h1>
   
 
-        
-        <a href="/2017/03/11/vue/vue-自定义/" class="archive-article-date">
-  	<time datetime="2017-03-11T15:02:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-过虑器的变化"><a href="#1-过虑器的变化" class="headerlink" title="1. 过虑器的变化"></a>1. 过虑器的变化</h3><p>作者把所有系统自带的全部删除了-你大爷!<br>还好的是json过滤2.0自己添加了！<br>还有你可以自定义过滤器！</p>
-<a id="more"></a>
-<p><strong>自定义过滤器：</strong></p>
-<p>Vue.filter(‘ ‘,fn)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Vue.filter(sb,function(n)&#123;</div><div class="line">    return n&lt;10 ? &apos;0&apos;+n :&apos;&apos;+n</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<p>自定义过滤器的传参发生了变化:看起来像个函数了</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;&#123;msg| sb(&apos;1&apos;,&apos;2&apos;)&#125;&#125;</div></pre></td></tr></table></figure>
-<p><strong>自定义双向过滤器: 配合v-model的时候用的</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">Vue.filter(&apos;sb&apos;,&#123;</div><div class="line">    </div><div class="line">    read:function(input)&#123;</div><div class="line">    return  input.replace(/&lt;[^&lt;]+&gt;/g,&apos;&apos;);</div><div class="line">    &#125;,</div><div class="line">    write:function(val)&#123;</div><div class="line">        return val；</div><div class="line">    &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<blockquote>
-<p>由于vue2.0废弃了所有的过滤器 所以我们在肯目录在创建一个<br>fliters文件夹，里面一个index.js 吧所有的自定义过滤器引入</p>
-<p><strong>index.js</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">import &#123;</div><div class="line">&lt;!--每个过滤器一个js--&gt;</div><div class="line">    normalTime, </div><div class="line">    a,</div><div class="line">    b</div><div class="line">&#125; from  &apos;./normalTime&apos;;</div><div class="line"></div><div class="line">export default&#123;</div><div class="line">    normalTime,</div><div class="line">    a,</div><div class="line">    b</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
-</blockquote>
-<p><strong>normalTime.js</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">export const normalTime = (time) =&gt; &#123;</div><div class="line">    if (time) &#123;</div><div class="line">        var oDtae = new Date();</div><div class="line">        oDtae.setTime(time);</div><div class="line">        var y = oDtae.getFullYear();</div><div class="line">        var m = oDtae.getMonth()+1;</div><div class="line">        var d = oDtae.getDate();</div><div class="line">        var h = oDtae.getHours();</div><div class="line">        var mm = oDtae.getMinutes();</div><div class="line">        var s = oDtae.getSeconds();</div><div class="line"></div><div class="line">        return y + &apos;-&apos; + m + &apos;-&apos; + d + &apos;-&apos; + h + &apos;:&apos; + mm + &apos;:&apos; + s;</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
-<p>main.js<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">import filters from &apos;./fliters/index&apos;;</div><div class="line"></div><div class="line">//es6高深语法 自动选择对应的过滤器</div><div class="line">Object.keys(filters).forEach((key) =&gt; &#123;</div><div class="line">    Vue.filter(key, filters[key])</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
-<hr>
-<h3 id="2-自定义指令"><a href="#2-自定义指令" class="headerlink" title="2. 自定义指令"></a>2. 自定义指令</h3><p>局部指令在在组件里定义：所以看情况用吧<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"> export default&#123;</div><div class="line">        directives: &#123;</div><div class="line">            red: &#123;</div><div class="line">                inserted:function (el) &#123;</div><div class="line">                    el.style.background=&apos;red&apos;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line">&lt;p v-red&gt; 1233 &lt;/p&gt;</div></pre></td></tr></table></figure></p>
-<p>全局自定义指令复用性比较大 </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">Vue.directive(&apos;focus&apos;, &#123;</div><div class="line">    // 当绑定元素插入到 DOM 中。</div><div class="line">    inserted: function (el) &#123;</div><div class="line">        // 聚焦元素</div><div class="line">        el.focus();</div><div class="line">        el.style.background=&apos;red&apos;;</div><div class="line">    &#125;</div><div class="line">&#125;)</div><div class="line"></div><div class="line"></div><div class="line">&lt;input ...   v-focus&gt;</div></pre></td></tr></table></figure>
-<p>!注意当你删除了自定义指令记得吧 标签也删掉不然会报错！</p>
-<blockquote>
-<p>有空你可以之定义也给拖拽指令</p>
-</blockquote>
-<h3 id="3-自定义键盘指令"><a href="#3-自定义键盘指令" class="headerlink" title="3. 自定义键盘指令"></a>3. 自定义键盘指令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">//之前</div><div class="line">Vue.directive(&apos;on&apos;).keyCodes.f1=112;</div><div class="line"></div><div class="line">//现在</div><div class="line">Vue.config.keyCodes.f1=11;</div></pre></td></tr></table></figure>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">-vue</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">-思路</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/-vue2.0/" class="article-tag-list-link color3">-vue2.0</a>
+        			<a href="/categories/-思路/" class="article-tag-list-link color4">-思路</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2017/03/12/vue/vuex-高级做法/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          vue - vuex-高级做法
-        
-      </div>
-    </a>
   
   
-    <a href="/2017/03/10/vue/vue-router：路由（前端交互）/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">vue - router</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-
-
-
+    </div></section>
   
 
-
-
-<!-- 网易云跟帖评论插件通用代码 -->
-<div class="netease">
-  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
-  <script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
-  <script>
-    var cloudTieConfig = {
-      url: document.location.href,
-      sourceId: "",
-      productKey: "83427ba7cc59469392750cf6e4a88d52",
-      target: "cloud-tie-wrapper"
-    };
-    var yunManualLoad = true;
-    Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
-  </script>
-</div>
-<!-- 网易云跟帖代码结束 -->
-
-
-
-
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -331,9 +232,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",
