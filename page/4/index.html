@@ -145,6 +145,676 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-es6/ES6基础篇-函数扩展" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/01/07/es6/ES6基础篇-函数扩展/">ES6-函数扩展</a>
+    </h1>
+  
+
+        
+        <a href="/2017/01/07/es6/ES6基础篇-函数扩展/" class="archive-article-date">
+  	<time datetime="2017-01-07T15:02:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>4. 函数扩展</strong></p>
+<p><strong>4.1 函数参数的默认值：</strong></p>
+<blockquote>
+<p>定义默认值的参数必须是尾数，因为定义默认值之后该参数可以忽略！</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function sb(a, b = 3) &#123; //默认参数放最后一位</div><div class="line">     return &#123;a, b&#125;;</div><div class="line"> &#125;</div><div class="line"> //有给参数就用给的</div><div class="line"> console.log(sb(1, 2))//Object &#123;a: 1, b: 2&#125;</div><div class="line"> //没给参数就用默认的，就像ajax没有写方法就默认 get</div><div class="line"> console.log(sb(1))//Object &#123;a: 1, b: 3&#125;</div></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2017/01/07/es6/ES6基础篇-函数扩展/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">-Name</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/-javaScript/" class="article-tag-list-link color2">-javaScript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/01/07/es6/ES6基础篇-函数扩展/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-es6/ES6基础篇-对象扩展" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/01/06/es6/ES6基础篇-对象扩展/">ES6-对象扩展</a>
+    </h1>
+  
+
+        
+        <a href="/2017/01/06/es6/ES6基础篇-对象扩展/" class="archive-article-date">
+  	<time datetime="2017-01-06T15:02:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>1. 属性的简洁表示法</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">   function fn(x, y) &#123;</div><div class="line">        x++;</div><div class="line">        y++;</div><div class="line">//        return &#123;</div><div class="line">//            x: x,</div><div class="line">//            y: y</div><div class="line">//        &#125;</div><div class="line"></div><div class="line">        return &#123;x, y&#125; //跟简洁了</div><div class="line">    &#125;</div><div class="line">    console.log(fn(1, 2))// Object &#123;x: 2, y: 3&#125;</div></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2017/01/06/es6/ES6基础篇-对象扩展/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">-Name</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/-javaScript/" class="article-tag-list-link color2">-javaScript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/01/06/es6/ES6基础篇-对象扩展/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-es6/ES6-基础篇" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/01/05/es6/ES6-基础篇/">ES6-基础篇</a>
+    </h1>
+  
+
+        
+        <a href="/2017/01/05/es6/ES6-基础篇/" class="archive-article-date">
+  	<time datetime="2017-01-05T15:02:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>es6环境：</strong></p>
+<blockquote>
+<p><strong>node.js</strong>几乎完全支持es6语法，2017几乎所有新版本游览器都支持es6这是历史发展的必然趋势啊，奈奈的学学学…</p>
+<p>测试环境：在谷歌下未来保证正正常运行，需要使用严格模式’user strict’</p>
+<p>在火狐下，需要知道测试版本，即在script标签里面添加”application/javascript;version=1.7”</p>
+</blockquote>
+        
+          <a class="article-more-a" href="/2017/01/05/es6/ES6-基础篇/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">-Name</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/-javaScript/" class="article-tag-list-link color2">-javaScript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/01/05/es6/ES6-基础篇/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-git/github前端必备技能-GitHub" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/01/01/git/github前端必备技能-GitHub/">玩转github</a>
+    </h1>
+  
+
+        
+        <a href="/2017/01/01/git/github前端必备技能-GitHub/" class="archive-article-date">
+  	<time datetime="2017-01-01T15:02:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>一、什么是git</strong></p>
+<p>1.git：工具，版本控制</p>
+<p>2.github：网站、社交平台、开源项目、远程仓库</p>
+        
+          <a class="article-more-a" href="/2017/01/01/git/github前端必备技能-GitHub/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">-git</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/-github/" class="article-tag-list-link color3">-github</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/01/01/git/github前端必备技能-GitHub/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-component/结合jq创造复用性最大的数据组件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/30/component/结合jq创造复用性最大的数据组件/">javaScript -数据组件</a>
+    </h1>
+  
+
+        
+        <a href="/2016/12/30/component/结合jq创造复用性最大的数据组件/" class="archive-article-date">
+  	<time datetime="2016-12-30T15:02:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>纯据组件如sdk，变量不需要用this</strong>，因为数据庞大直接var省去了大量的调试，因为有()()所以他们对window来说都是局部变量不会污染全局环境</p>
+        
+          <a class="article-more-a" href="/2016/12/30/component/结合jq创造复用性最大的数据组件/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">-Name</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/-javaScript/" class="article-tag-list-link color2">-javaScript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/12/30/component/结合jq创造复用性最大的数据组件/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-component/靠近jq之自定义事件组件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/30/component/靠近jq之自定义事件组件/">javaScript -ui之定义事件组件</a>
+    </h1>
+  
+
+        
+        <a href="/2016/12/30/component/靠近jq之自定义事件组件/" class="archive-article-date">
+  	<time datetime="2016-12-30T00:02:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>从自定义拖拽组件<strong>变形</strong>到自定义事件组件</p>
+        
+          <a class="article-more-a" href="/2016/12/30/component/靠近jq之自定义事件组件/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">-Name</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/-javaScript/" class="article-tag-list-link color2">-javaScript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/12/30/component/靠近jq之自定义事件组件/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-component/4.面向对象之组件开发" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/29/component/4.面向对象之组件开发/">javaScript -ui组件</a>
+    </h1>
+  
+
+        
+        <a href="/2016/12/29/component/4.面向对象之组件开发/" class="archive-article-date">
+  	<time datetime="2016-12-29T00:02:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-29</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p> 组件开发：多组对象，像兄弟之间的关系（代码复用的一种形式） </p>
+        
+          <a class="article-more-a" href="/2016/12/29/component/4.面向对象之组件开发/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">-Name</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/-javaScript/" class="article-tag-list-link color2">-javaScript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/12/29/component/4.面向对象之组件开发/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-js/第 三 章：闭包和高阶函数" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/28/js/第 三 章：闭包和高阶函数/">js设计模式 - 第三章</a>
+    </h1>
+  
+
+        
+        <a href="/2016/12/28/js/第 三 章：闭包和高阶函数/" class="archive-article-date">
+  	<time datetime="2016-12-28T12:02:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-28</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>3.1 闭包</strong></p>
+<p>闭包的形成与变量的作用域以及变量的生存周期密切相关。</p>
+<p><strong>3.1.1 变量的作用域</strong></p>
+<p>在函数里面可以看到外面的变量，而在函数外面则无法看到函数里面的变量。<br>
+        
+          <a class="article-more-a" href="/2016/12/28/js/第 三 章：闭包和高阶函数/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">-Name</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/-javaScript/" class="article-tag-list-link color2">-javaScript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/12/28/js/第 三 章：闭包和高阶函数/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-js/第二章：this 、 call 和 apply" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/27/js/第二章：this 、 call 和 apply/">js设计模式 - 第二章</a>
+    </h1>
+  
+
+        
+        <a href="/2016/12/27/js/第二章：this 、 call 和 apply/" class="archive-article-date">
+  	<time datetime="2016-12-27T11:02:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-this-的指向"><a href="#1-this-的指向" class="headerlink" title="1.this 的指向"></a>1.this 的指向</h3><p>除去不常用的 with 和 eval 的情况，具体到实际应用中， this 的指向大致可以分为以下 4种。</p>
+<blockquote>
+<p>作为对象的方法调用。</p>
+<p>作为普通函数调用。</p>
+<p>构造器调用。</p>
+<p>Function.prototype.call 或 Function.prototype.apply 调用。</p>
+</blockquote>
+        
+          <a class="article-more-a" href="/2016/12/27/js/第二章：this 、 call 和 apply/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">-Name</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/-javaScript/" class="article-tag-list-link color2">-javaScript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/12/27/js/第二章：this 、 call 和 apply/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-js/第一章：js-设计模式-基础" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -219,548 +889,9 @@
 
 
   
-    <article id="post-js/js-页面跳转,A跳到B.以及页面传值" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/25/js/js-页面跳转,A跳到B.以及页面传值/">javaScript -页面跳转</a>
-    </h1>
-  
-
-        
-        <a href="/2016/12/25/js/js-页面跳转,A跳到B.以及页面传值/" class="archive-article-date">
-  	<time datetime="2016-12-25T15:02:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>JS跳转大概有以下几种方式：前三种比较常用，后两个比较安全性</strong></p>
-<p>第一种：(跳转到b.html)</p>
-<blockquote>
-<p>Location 对象是 Window 对象的一个部分，可通过 window.location 属性来访问。（就是url细分成几个详细总称Location方法）</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">window.location.href=&quot;b.html&quot;;</div></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2016/12/25/js/js-页面跳转,A跳到B.以及页面传值/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">-Name</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/-javaScript/" class="article-tag-list-link color2">-javaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/12/25/js/js-页面跳转,A跳到B.以及页面传值/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-js/js-cookie" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/15/js/js-cookie/">javaScript -cookie</a>
-    </h1>
-  
-
-        
-        <a href="/2016/12/15/js/js-cookie/" class="archive-article-date">
-  	<time datetime="2016-12-15T15:02:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>1. 什么是cookie？</strong></p>
-<p>游览器内置了一个cookie，这个文件是存在客户端上的！敏感数据不适合会泄密，cooKie运行是需要的，但火狐是可以在本地上查看到，初学者可以用火狐来学习！（查看页面学习-安全-cookie）</p>
-<p>他可以用来保存信息如：<br>自动登入、记住用户名等。</p>
-        
-          <a class="article-more-a" href="/2016/12/15/js/js-cookie/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">-Name</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/-javaScript/" class="article-tag-list-link color2">-javaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/12/15/js/js-cookie/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-js/常用正则表达式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/12/js/常用正则表达式/">javaScript -常用正则表达式</a>
-    </h1>
-  
-
-        
-        <a href="/2016/12/12/js/常用正则表达式/" class="archive-article-date">
-  	<time datetime="2016-12-12T15:02:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>常用正则表达式</p>
-<h3 id="一、校验数字的表达式"><a href="#一、校验数字的表达式" class="headerlink" title="一、校验数字的表达式"></a>一、校验数字的表达式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">数字：^[0-9]*$</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">n位的数字：^\d&#123;n&#125;$</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">至少n位的数字：^\d&#123;n,&#125;$</div></pre></td></tr></table></figure>
-<p>m-n位的数字：^\d{m,n}$</p>
-<p>零和非零开头的数字：^(0|[1-9][0-9]*)$</p>
-        
-          <a class="article-more-a" href="/2016/12/12/js/常用正则表达式/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">-Name</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/-javaScript/" class="article-tag-list-link color2">-javaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/12/12/js/常用正则表达式/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-js/正则表达式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/07/js/正则表达式/">javaScript - 正则表达式</a>
-    </h1>
-  
-
-        
-        <a href="/2016/12/07/js/正则表达式/" class="archive-article-date">
-  	<time datetime="2016-12-07T02:02:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="REGEXP对象"><a href="#REGEXP对象" class="headerlink" title="REGEXP对象"></a>REGEXP对象</h1><p><strong>字面量</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var reg=/\bis\b/g;</div><div class="line">//  \表示转义， \b \b  表示单词之间</div><div class="line">&apos;he is a boy . this is a dog&apos; .replace(reg,&apos;IS&apos;)</div><div class="line">//&quot;he IS a boy . this IS a dog&quot;</div></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2016/12/07/js/正则表达式/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">-Name</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/-javaScript/" class="article-tag-list-link color2">-javaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/12/07/js/正则表达式/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-js/你不知道的js" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/06/js/你不知道的js/">javaScript -你不知道的js</a>
-    </h1>
-  
-
-        
-        <a href="/2016/12/06/js/你不知道的js/" class="archive-article-date">
-  	<time datetime="2016-12-06T15:02:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ol>
-<li>insertBefore<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">window.onload = function () &#123;</div><div class="line">    var oinput = document.getElementById(&apos;input1&apos;);</div><div class="line">    var oul = document.getElementById(&apos;ul1&apos;);</div><div class="line">    var inow = 0;</div><div class="line">    var ali = oul.getElementsByTagName(&apos;li&apos;);</div><div class="line">    oinput.onclick = function () &#123;</div><div class="line">        var oli = document.createElement(&apos;li&apos;);</div><div class="line">        oli.innerHTML = inow++;</div><div class="line">        //oul.appendChild(oli);// 这个方法会把新创建添加到最后，一般我们是要相反的!</div><div class="line">        oul.insertBefore(oli, ali[0]) //重点它不需要判断有没有li可以正常运行</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ol>
-        
-          <a class="article-more-a" href="/2016/12/06/js/你不知道的js/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">-Name</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/-javaScript/" class="article-tag-list-link color2">-javaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/12/06/js/你不知道的js/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-js/javaScript - 下篇" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/29/js/javaScript - 下篇/">javaScript - 下篇</a>
-    </h1>
-  
-
-        
-        <a href="/2016/11/29/js/javaScript - 下篇/" class="archive-article-date">
-  	<time datetime="2016-11-29T15:02:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="面向对象的-程序设计"><a href="#面向对象的-程序设计" class="headerlink" title="面向对象的 程序设计"></a>面向对象的 程序设计</h3><p><strong>1. ECMAScript 中有两种属性</strong></p>
-<p><strong>数据属性 ：</strong></p>
-<blockquote>
-<p> Configurable : 表示能否通过delete 删除属性</p>
-<p> Enumerable : 表示能否通过 for-in 循环返回属性</p>
-<p> Writable : 表示能否修改属性的值</p>
-<p> Value : 包含这个属性的 数据值</p>
-<p>然而要修改属性的默认特性，必须用Object.defineProperty()方法。</p>
-<p>这方法接收 <strong>三个参数</strong>  ( 属性所在对象，属性的名字，描述符对象【描述符对象的属性必须是：configurable、enumerable、writable、value】 )</p>
-</blockquote>
-        
-          <a class="article-more-a" href="/2016/11/29/js/javaScript - 下篇/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">-Name</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/-javaScript/" class="article-tag-list-link color2">-javaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/11/29/js/javaScript - 下篇/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-js/javaScript-上篇" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/28/js/javaScript-上篇/">javaScript - 上篇</a>
-    </h1>
-  
-
-        
-        <a href="/2016/11/28/js/javaScript-上篇/" class="archive-article-date">
-  	<time datetime="2016-11-28T15:02:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ol>
-<li><strong>结构：</strong> javascript=ECMAscript+DOM+BOM</li>
-<li><p><strong>注释</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">//单行</div><div class="line">/*</div><div class="line">多行</div><div class="line">*/</div></pre></td></tr></table></figure>
-</li>
-<li><p><strong>环境</strong>：    “use strict” 严格模式<br>严格模式下 变量名不能定义为：eval和argunments</p>
-</li>
-<li><strong>符号</strong>： 标示符，关键字，保留字</li>
-<li>基本数据用小写，alert()弹出现的也是数据所以是小写如object ；大写是类 类型如Object ；</li>
-</ol>
-<hr>
-        
-          <a class="article-more-a" href="/2016/11/28/js/javaScript-上篇/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">-Name</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/-javaScript/" class="article-tag-list-link color2">-javaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/11/28/js/javaScript-上篇/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/3/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span>
+      <a class="extend prev" rel="prev" href="/page/3/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/5/">Next &raquo;</a>
     </nav>
   
 
@@ -873,6 +1004,18 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">-jq</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">-mySQL</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">-node</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">-mysql</a>
               </li>
              
               <li class="article-tag-list-item">
