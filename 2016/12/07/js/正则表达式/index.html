@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>javaScript - 正则表达式 | 豆芽</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="REGEXP对象字面量 1234var reg=/\bis\b/g;//  \表示转义， \b \b  表示单词之间&amp;apos;he is a boy . this is a dog&amp;apos; .replace(reg,&amp;apos;IS&amp;apos;)//&amp;quot;he IS a boy . this IS a dog&amp;quot;">
+  <meta name="description" content="REGEXP对象字面量 1234var reg=/\bis/g;//  \表示转义， \b \b  表示单词之间&amp;apos;he is a boy . this is a dog&amp;apos; .replace(reg,&amp;apos;IS&amp;apos;)//&amp;quot;he IS a boy . this IS a dog&amp;quot;">
 <meta name="keywords" content="-Name">
 <meta property="og:type" content="article">
 <meta property="og:title" content="javaScript - 正则表达式">
 <meta property="og:url" content="http://yoursite.com/2016/12/07/js/正则表达式/index.html">
 <meta property="og:site_name" content="豆芽">
-<meta property="og:description" content="REGEXP对象字面量 1234var reg=/\bis\b/g;//  \表示转义， \b \b  表示单词之间&amp;apos;he is a boy . this is a dog&amp;apos; .replace(reg,&amp;apos;IS&amp;apos;)//&amp;quot;he IS a boy . this IS a dog&amp;quot;">
-<meta property="og:updated_time" content="2017-05-03T05:51:18.478Z">
+<meta property="og:description" content="REGEXP对象字面量 1234var reg=/\bis/g;//  \表示转义， \b \b  表示单词之间&amp;apos;he is a boy . this is a dog&amp;apos; .replace(reg,&amp;apos;IS&amp;apos;)//&amp;quot;he IS a boy . this IS a dog&amp;quot;">
+<meta property="og:updated_time" content="2017-06-19T08:33:09.058Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="javaScript - 正则表达式">
-<meta name="twitter:description" content="REGEXP对象字面量 1234var reg=/\bis\b/g;//  \表示转义， \b \b  表示单词之间&amp;apos;he is a boy . this is a dog&amp;apos; .replace(reg,&amp;apos;IS&amp;apos;)//&amp;quot;he IS a boy . this IS a dog&amp;quot;">
+<meta name="twitter:description" content="REGEXP对象字面量 1234var reg=/\bis/g;//  \表示转义， \b \b  表示单词之间&amp;apos;he is a boy . this is a dog&amp;apos; .replace(reg,&amp;apos;IS&amp;apos;)//&amp;quot;he IS a boy . this IS a dog&amp;quot;">
   
     <link rel="alternative" href="/atom.xml" title="豆芽" type="application/atom+xml">
   
@@ -169,21 +169,19 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="REGEXP对象"><a href="#REGEXP对象" class="headerlink" title="REGEXP对象"></a>REGEXP对象</h1><p><strong>字面量</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var reg=/\bis\b/g;</div><div class="line">//  \表示转义， \b \b  表示单词之间</div><div class="line">&apos;he is a boy . this is a dog&apos; .replace(reg,&apos;IS&apos;)</div><div class="line">//&quot;he IS a boy . this IS a dog&quot;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var reg=/\bis/g;</div><div class="line">//  \表示转义， \b \b  表示单词之间</div><div class="line">&apos;he is a boy . this is a dog&apos; .replace(reg,&apos;IS&apos;)</div><div class="line">//&quot;he IS a boy . this IS a dog&quot;</div></pre></td></tr></table></figure>
 <a id="more"></a>
 <p><strong>构造函数</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var reg=new RegExp(&apos;\\bis\\b&apos;,&apos;g&apos;)</div><div class="line">//  转义\\bis  转义\\b</div><div class="line">&apos;he is a boy . this is a dog&apos; .replace(reg,&apos;IS&apos;)</div><div class="line">//&quot;he IS a boy . this IS a dog&quot;</div></pre></td></tr></table></figure>
-<blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var reg = new RegExp(&apos;\\bis&apos;,&apos;gim&apos;);</div><div class="line">//  转义\\bis  转义\\b</div><div class="line">&apos;he is a boy . this is a dog&apos; .replace(reg,&apos;IS&apos;)</div><div class="line">//&quot;he IS a boy . this IS a dog&quot;</div></pre></td></tr></table></figure>
 <p>g全文搜索、 i不区分大小写、m行搜索</p>
-</blockquote>
-<h3 id="一-正则表达式由两种基本字符类型组成"><a href="#一-正则表达式由两种基本字符类型组成" class="headerlink" title="一. 正则表达式由两种基本字符类型组成"></a>一. 正则表达式由两种基本字符类型组成</h3><blockquote>
-<p><strong>原义文本字符</strong>： 就是原来的字符</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">a   abc  ijklnm 、、、</div></pre></td></tr></table></figure>
-<blockquote>
+<h3 id="一-正则表达式由两种基本字符类型组成"><a href="#一-正则表达式由两种基本字符类型组成" class="headerlink" title="一. 正则表达式由两种基本字符类型组成"></a>一. 正则表达式由两种基本字符类型组成</h3><p><strong>原义文本字符</strong>： 就是原来的字符</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">a   abc  ijklnm 发送31T%&amp;%...</div></pre></td></tr></table></figure>
 <p><strong>元字符</strong>：是正则表达式中有特殊含义的非字母字符</p>
-</blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">*  + ?  $ ^ . | \ () &#123;&#125; []</div></pre></td></tr></table></figure>
+<p><strong>1. 元字符类</strong></p>
+<p>元字符[ ]可以构建一个简单的类<br>如：[abc]吧a b c归为一类，只要匹配其中一个而不是abc连在一起的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">//字符类</div><div class="line">console.log(&apos;A123HJDFSXXX2333&apos;.replace(/[ahjdfsx]/gim, &apos;y&apos;));</div><div class="line">//y123yyyyyyyy2333</div><div class="line">// 字符类范围</div><div class="line">console.log(&apos;A123HJDFSXXX2333&apos;.replace(/[a-z]/gim, &apos;Y&apos;));</div><div class="line">//Y123YYYYYYYY2333</div><div class="line">//字符类反取</div><div class="line">console.log(&apos;A123HJDFSXXX2333&apos;.replace(/[^a-z]/gim, &apos;Y&apos;));</div><div class="line">//AYYYHJDFSXXXYYYY</div></pre></td></tr></table></figure>
+<p><strong>2. 预定义类</strong></p>
 <table>
 <thead>
 <tr>
@@ -222,19 +220,6 @@
 </tr>
 </tbody>
 </table>
-<p><strong>1. 字符类</strong></p>
-<blockquote>
-<p>一般情况下正则表达式一个字符对应字符串一个字符，<br>如： 表达式 ab\t 的含义是 “ab”-tab </p>
-<p>元字符[ ]可以构建一个简单的<strong>类</strong><br>如：[abc]吧a b c归为一类，只要匹配其中一个而不是abc连在一起的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&apos;a123cffb&apos;.replace(/[abc]/g,&apos;X&apos;);</div><div class="line"></div><div class="line">// &quot;X123XffX&quot;</div></pre></td></tr></table></figure></p>
-</blockquote>
-<p><strong>2. 字符类取反</strong></p>
-<blockquote>
-<p> 2.元字符^创建反向类/负向类</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&apos;a123cffb&apos;.replace(/[^abc]/g,&apos;X&apos;);</div><div class="line">// &quot;aXXXcXXb&quot;</div></pre></td></tr></table></figure>
-<p><strong>3. 范围类</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">a123j3123l55z66k&apos;.replace(/[a-z]/g,&apos;X&apos;)</div><div class="line">// &quot;X123X3123X55X66X&quot;</div><div class="line"></div><div class="line">&apos;a1R3j312G5Hz66k&apos;.replace(/[a-zA-Z]/g,&apos;X&apos;)</div><div class="line">//&quot;X1X3X312X5XX66X&quot;</div><div class="line"></div><div class="line">&apos;2016-12-12&apos;.replace(/[0-9]/g,&apos;X&apos;)</div><div class="line">&quot;XXXX-XX-XX&quot;</div><div class="line"></div><div class="line">&apos;2016-12-12&apos;.replace(/[0-9-]/g,&apos;X&apos;)</div><div class="line">// 直接在范围里加一个- 就可以了&quot;XXXXXXXXXX&quot;</div></pre></td></tr></table></figure>
-<p><strong>4. 预定义类</strong></p>
 <table>
 <thead>
 <tr>
@@ -245,9 +230,9 @@
 </thead>
 <tbody>
 <tr>
-<td>.</td>
-<td>[^\r\n]</td>
-<td>除了回车符和换行符之外的所有字符</td>
+<td>\D</td>
+<td>[^0-9]</td>
+<td>非数字字符</td>
 </tr>
 <tr>
 <td>\d</td>
@@ -255,9 +240,9 @@
 <td>数字字符</td>
 </tr>
 <tr>
-<td>\D</td>
-<td>[^0-9]</td>
-<td>非数字字符</td>
+<td>\S</td>
+<td>[^\t\n\x0B\f\r]</td>
+<td>非空白符</td>
 </tr>
 <tr>
 <td>\s</td>
@@ -265,9 +250,9 @@
 <td>空白符</td>
 </tr>
 <tr>
-<td>\S</td>
-<td>[^\t\n\x0B\f\r]</td>
-<td>非空白符</td>
+<td>\W</td>
+<td>[^a-zA-Z_0-9]</td>
+<td>非单词字符</td>
 </tr>
 <tr>
 <td>\w</td>
@@ -275,14 +260,14 @@
 <td>单词字符（字母、数字下划线）</td>
 </tr>
 <tr>
-<td>\W</td>
-<td>[^a-zA-Z_0-9]</td>
-<td>非单词字符</td>
+<td>.</td>
+<td>[^\r\n]</td>
+<td>除了回车符和换行符之外的所有字符</td>
 </tr>
 </tbody>
 </table>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">ab[0-9][^\r\n] 等价于 ab\d. 是不是 很牛！！！</div><div class="line"></div><div class="line"></div><div class="line">`</div></pre></td></tr></table></figure>
-<p><strong>5. 边界</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">// 预定义类</div><div class="line">// 数字</div><div class="line">console.log(&apos;A123HJDFSXXX2333&apos;.replace(/\D/gim, &apos;Y&apos;)); //D 非数字</div><div class="line">//Y123YYYYYYYY2333</div><div class="line">console.log(&apos;A123HJDFSXXX2333&apos;.replace(/\d/gim, &apos;Y&apos;));</div><div class="line">// AYYYHJDFSXXXYYYY</div><div class="line"></div><div class="line">// 空格</div><div class="line">console.log(&apos;A123HJDFSXXX2333&apos;.replace(/\S/gim, &apos;Y&apos;));//S 非空</div><div class="line">//YYYYYYYYYYYYYYYY</div><div class="line">console.log(&apos;A123HJDFSXXX2333&apos;.replace(/\s/gim, &apos;Y&apos;));</div><div class="line">//A123HJDFSXXX2333</div><div class="line"></div><div class="line">// 数字、字母、下划线</div><div class="line">console.log(&apos;A123HJ&amp;&amp;%%==--+————_DFSXXX2333&apos;.replace(/\W/gim, &apos;Y&apos;)); //W 非数字、字母、下划线</div><div class="line">// A123HJYYYYYYYYYYYYY_DFSXXX2333</div><div class="line">console.log(&apos;A123HJ&amp;&amp;%%==--+————_DFSXXX2333&apos;.replace(/\w/gim, &apos;Y&apos;));</div><div class="line">// YYYYYY&amp;&amp;%%==--+————YYYYYYYYYYY</div><div class="line"></div><div class="line">// 除了回车符和换行符之外的所有字符</div><div class="line">console.log(&apos;A123HJ&amp;&amp;%%==--+————_DFSXXX2333&apos;.replace(/./gim, &apos;Y&apos;));</div><div class="line">// YYYYYYYYYYYYYYYYYYYYYYYYYYYYYY</div><div class="line"></div><div class="line"></div><div class="line">`</div></pre></td></tr></table></figure>
+<p><strong>3. 边界</strong></p>
 <table>
 <thead>
 <tr>
@@ -309,10 +294,8 @@
 </tr>
 </tbody>
 </table>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&apos;this is a boy&apos;.replace(/\bis\b/g,&apos;0&apos;)</div><div class="line">// &quot;this 0 a boy&quot;</div><div class="line"></div><div class="line">&apos;this is a boy&apos;.replace(/\Bis\b/g,&apos;0&apos;)</div><div class="line">// &quot;th0 is a boy&quot;</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&apos;@123@abc@&apos;.replace(/@./g,&apos;X&apos;)</div><div class="line">// &quot;X23Xbc@&quot;</div><div class="line"></div><div class="line"></div><div class="line">&apos;@123@abc@&apos;.replace(/^@./g,&apos;X&apos;)</div><div class="line">// &quot;X23@abc@&quot;</div><div class="line"></div><div class="line">&apos;@123@abc@&apos;.replace(/.@/g,&apos;X&apos;)</div><div class="line">// &quot;@12XabX&quot;</div><div class="line"></div><div class="line">&apos;@123@abc@&apos;.replace(/.@$/g,&apos;X&apos;)</div><div class="line">&quot;@123@abX</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">mulsrt</div><div class="line">@123</div><div class="line">@456</div><div class="line">@789</div><div class="line"></div><div class="line">mulsrt.replace(/^@\d/gm,&apos;x&apos;)//m处理多行</div><div class="line"></div><div class="line">x123</div><div class="line">x456</div><div class="line">x789</div></pre></td></tr></table></figure>
-<p><strong>6. 量词</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">// 边界：单词的左右两边视为边界</div><div class="line">//非单次边界</div><div class="line"> console.log(&apos;this is a boy&apos;.replace(/\Bi/gim, &apos;Y&apos;));</div><div class="line">// thYs is a boy</div><div class="line">//单次边界</div><div class="line"> console.log(&apos;this is a boy&apos;.replace(/\bi/gim, &apos;Y&apos;));</div><div class="line">//this Ys a boy</div><div class="line"></div><div class="line">// 已字符串的第一个字母串开始</div><div class="line">console.log(&apos;this is a boy&apos;.replace(/^this/g, &apos;Y&apos;));</div><div class="line">//Y is a boy</div><div class="line"></div><div class="line">// 已字符串的最后一个字母串结束</div><div class="line">console.log(&apos;this is a boy&apos;.replace(/y$/g, &apos;Y&apos;));</div><div class="line">//this is a boY</div></pre></td></tr></table></figure>
+<p><strong>4. 量词</strong></p>
 <table>
 <thead>
 <tr>
@@ -347,19 +330,19 @@
 </tr>
 </tbody>
 </table>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">\d?\w+\d*\d&#123;2&#125;\d&#123;2,5&#125;\w&#123;2,&#125;</div></pre></td></tr></table></figure>
-<p><strong>6.1 贪婪模式</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&apos;12345678&apos;.replace(/\d&#123;3,6&#125;/g,&apos;X&apos;)</div><div class="line">// &quot;X78&quot;  3到6次正则贪婪的选择了6次</div><div class="line"></div><div class="line">`</div></pre></td></tr></table></figure></p>
-<p><strong>6.2 非贪婪模式</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">\d?   \w+  \d*  \d&#123;2&#125;  \d&#123;2,5&#125;  \w&#123;2,&#125;</div></pre></td></tr></table></figure>
+<p><strong>5.1 贪婪模式</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&apos;12345678&apos;.replace(/\d&#123;3,6&#125;/g,&apos;X&apos;)</div><div class="line">// &quot;X78&quot;  3到6次正则贪婪的选择了6次</div><div class="line"></div><div class="line">`</div></pre></td></tr></table></figure></p>
+<p><strong>5.2 非贪婪模式</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&apos;12345678&apos;.replace(/\d&#123;3,6&#125;?/g,&apos;X&apos;)</div><div class="line">// &quot;XX78&quot;  三个一组选择了3次</div></pre></td></tr></table></figure>
-<p><strong>7. 分组: ( )</strong></p>
+<p><strong>6. 分组: ( )</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&apos;a1b2c3d4&apos;.replace(/([a-z]\d)&#123;3&#125;/g,&apos;X&apos;)</div><div class="line">// &quot;Xd4&quot;</div></pre></td></tr></table></figure>
-<p><strong>8. 或: |</strong></p>
+<p><strong>7. 或: |</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&apos;ByronCasper&apos;.replace(/Byron|Casper/g,&apos;X&apos;)</div><div class="line">// &quot;XX&quot;</div><div class="line"></div><div class="line">&apos;ByronsperByrCasper&apos;.replace(/Byr(on|Ca)sper/g,&apos;X&apos;)</div><div class="line">// &quot;XX&quot;</div></pre></td></tr></table></figure>
-<p><strong>9. 反向引用</strong></p>
+<p><strong>8. 反向引用</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&apos;2016-12-12&apos;.replace(/(\d&#123;4&#125;)-(\d&#123;2&#125;)-(\d&#123;2&#125;)/g,&apos;$2/$3/$1&apos;)</div><div class="line">// &quot;12/12/2016&quot;</div></pre></td></tr></table></figure>
-<p><strong>10. 忽略分组:只需要在分组内加上 ？： 就可以</strong></p>
+<p><strong>9. 忽略分组:只需要在分组内加上 ？： 就可以</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&apos;ByronsperByrCasper&apos;.replace(/Byr( ? : on|Ca)sper/g,&apos;X&apos;)</div><div class="line">// &quot;ByronsperX&quot;</div><div class="line"></div><div class="line">&apos;ByronsperByrCasper&apos;.replace(/Byr( ? : on| ? : Ca)sper/g,&apos;X&apos;)</div><div class="line">// &quot;ByronsperByrCasper&quot;</div></pre></td></tr></table></figure>
-<p><strong>11. 前瞻</strong></p>
+<p><strong>10. 前瞻</strong></p>
 <blockquote>
 <p>1.正则表达式是从文本头部向尾部开始解析，文本尾部方向，称为‘前’</p>
 <p>2.前瞻就是在正则表达式匹配到规则时，向前检查是否符合断言。 (js不支持后顾) </p>
@@ -660,11 +643,11 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">-jq</a>
+                <a href="javascript:void(0)" class="js-tag color1">-hexo</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">-hexo</a>
+                <a href="javascript:void(0)" class="js-tag color4">-jq</a>
               </li>
              
               <li class="article-tag-list-item">
