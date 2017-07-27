@@ -1,0 +1,246 @@
+.main {
+    width: 10rem;
+}
+
+.online-tab {
+    width: 10rem;
+    padding: .25rem 0;
+}
+
+.online-tab ul {
+    width: 9.4rem;
+    height: 1rem;
+    margin: 0 auto;
+    border-radius: 0.1rem;
+}
+
+.online-tab ul li {
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    color: #808080;
+    width: 34%;
+    position: relative;
+    font-size: 16px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+}
+
+[data-dpr="2"] .online-tab ul li {
+    font-size: 32px;
+}
+
+[data-dpr="3"] .online-tab ul li {
+    font-size: 48px;
+}
+
+.online-tab ul li:first-child {
+    border-radius: 0.1rem 0 0 0.1rem;
+}
+
+.online-tab ul li:nth-child(2) {
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+}
+
+.online-tab ul li:last-child {
+    border-radius: 0 0.1rem .1rem 0;
+}
+
+.online-tab ul li.active {
+    background-color: #00b3ff;
+    color: #ffffff;
+    font-weight: bold;
+    border: 1px solid #00b3ff;
+}
+
+.online-tab ul li em {
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    margin-left: -10px;
+    width: 10px;
+    height: 5px;
+    background: url(../../assets/img/arrow.png) no-repeat;
+    background-size: 10px 5px;
+    display: none;
+}
+
+[data-dpr="2"] .online-tab ul li em {
+    bottom: -10px;
+    margin-left: -20px;
+    width: 20px;
+    height: 10px;
+    background-size: 20px 10px;
+}
+
+[data-dpr="3"] .online-tab ul li em {
+    bottom: -15px;
+    margin-left: -30px;
+    width: 30px;
+    height: 15px;
+    background-size: 30px 15px;
+}
+
+.online-data {
+    width: 10rem;
+    margin: 1px auto 0;
+    background-color: #fff;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    clear: both;
+}
+
+.online-data ul li {
+    height: 1.7726rem;
+    padding: 0.3rem 0;
+    width: 9.6rem;
+    margin: 0 auto;
+    position: relative;
+}
+
+.online-data ul li + li {
+    border-top: 1px dashed #e0e0e0;
+}
+
+[data-dpr="2"] .online-data ul li + li {
+    border-top: 2px dashed #e0e0e0;
+}
+
+[data-dpr="3"] .online-data ul li + li {
+    border-top: 3px dashed #e0e0e0;
+}
+
+.online-data ul li .left-content, .online-data ul li .image-content {
+    float: left;
+    margin-left: 0.13rem;
+}
+
+.online-data ul li .right-content {
+    float: right;
+    margin-right: 0.25rem;
+}
+
+.online-data ul li .right-content button {
+    background-color: #00b3ff;
+    border: none;
+    color: #fff;
+    border-radius: 0.134rem;
+    margin-top: 0.6rem;
+    font-size: 14px;
+    line-height: 0.9rem;
+    width: 1.5rem;
+}
+
+[data-dpr="2"] .online-data ul li .right-content button {
+    font-size: 28px;
+}
+
+[data-dpr="3"] .online-data ul li .right-content button {
+    font-size: 42px;
+}
+
+.online-data ul li .right-content button a {
+    color: #fff;
+}
+
+.online-data ul li .image-content img {
+    width: 1.781rem;
+    height: 1.781rem;
+    border-radius: 0.3rem;
+}
+
+.online-data ul li .text-content img {
+    width: 0.35rem;
+}
+
+.online-data ul li .text-content {
+    width: 5.3rem;
+    margin-left: 2.2rem;
+    line-height: 0.58rem;
+}
+
+.online-data ul li .text-content p:first-child {
+    font-size: 14px;
+}
+
+[data-dpr="2"] .online-data ul li .text-content p:first-child {
+    font-size: 28px;
+}
+
+[data-dpr="3"] .online-data ul li .text-content p:first-child {
+    font-size: 42px;
+}
+
+.online-data ul li .text-content p:nth-child(2) {
+    margin-top: 1px;
+}
+
+.online-data ul li .text-content p:last-child {
+    color: #999;
+}
+
+.online-data.buttonimg button {
+    background-color: #ccc !important;
+}
+
+.load-more {
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+.load-more p {
+    padding: 0.4rem 0;
+    font-size: 14px;
+    color: #999;
+}
+
+[data-dpr="2"] .load-more p {
+    font-size: 28px;
+}
+
+[data-dpr="3"] .load-more p {
+    font-size: 42px;
+}
+
+.game-ot-arrow {
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid #f50e08;
+    position: absolute;
+    top: 0.4rem;
+    left: 5.652rem;
+}
+
+[data-dpr="2"] .game-ot-arrow {
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid #f50e08;
+}
+
+[data-dpr="3"] .game-ot-arrow {
+    border-left: 18px solid transparent;
+    border-right: 18px solid transparent;
+    border-bottom: 18px solid #f50e08;;
+}
+
+.game-online-time {
+    font-size: 12px;
+    background: #fb0002;
+    color: #f7ebe6;
+    position: absolute;
+    left: 5.8rem;
+    top: 0.25rem;
+    width: 3.5rem;
+    text-align: center;
+}
+[data-dpr="2"] .game-online-time {
+    font-size: 24px;
+
+}
+
+[data-dpr="3"] .game-online-time {
+    font-size: 36px;
+}

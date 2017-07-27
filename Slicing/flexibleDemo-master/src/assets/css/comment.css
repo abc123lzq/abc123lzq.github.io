@@ -1,0 +1,280 @@
+body {
+    background: #f5f5f5;
+}
+
+@media screen and (min-width: 640px) {
+    body {
+        max-width: 10.0rem;
+        margin: 0 auto !important;
+    }
+}
+
+header {
+    width: 10rem;
+    clear: both;
+    height: 0.8125rem;
+    /*padding: .3rem 0 0.6rem 0;*/
+    padding: 0.2rem 0 0.4rem 0;
+    background: #fff;
+}
+
+header .left-content img {
+    width: 2.812rem;
+    height: auto;
+    margin: 0.103125rem 0 0 0.440625rem;
+}
+
+header .right-content img {
+    width: 0.666rem;
+    height: auto;
+    margin-right: 0.559375rem;
+    margin-top: 0.203125rem;
+}
+
+nav {
+    clear: both;
+    height: 1.2rem;
+    width: 10.0rem;
+    background-color: #29abe2;
+}
+
+nav ul {
+}
+
+nav ul li {
+    float: left;
+    width: 1.66rem;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    text-align: center;
+}
+
+nav ul li.active {
+    background-color: #078fc9;
+}
+
+nav ul li a {
+    color: #fff;
+    font-size: 16px;
+}
+
+[data-dpr="2"] nav ul li a {
+    font-size: 32px
+}
+
+[data-dpr="3"] nav ul li a {
+    font-size: 48px
+}
+
+footer {
+    clear: both;
+    width: 10.0rem;
+    background: #fff;
+}
+
+footer ul {
+    height: 1.2rem;
+    background-color: #29abe2;
+}
+
+footer ul li {
+    float: left;
+    width: 1.63rem;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    text-align: center;
+}
+
+footer ul li + li {
+    border-left: 1px solid #66d2ff;
+}
+
+footer ul li a {
+    color: #fff;
+    font-size: 16px;
+}
+
+[data-dpr="2"] footer ul li a {
+    font-size: 32px
+}
+
+[data-dpr="3"] footer ul li a {
+    font-size: 48px
+}
+
+.footer-text {
+    font-size: 13px;
+    text-align: center;
+    line-height: 30px;
+    margin: 0.4rem 0;
+}
+
+[data-dpr="2"] .footer-text {
+    font-size: 26px;
+    line-height: 60px;
+}
+
+[data-dpr="3"] .footer-text {
+    font-size: 39px;
+    line-height: 100px;
+}
+
+.footer-text .footer-a1 {
+    color: #29abe2;
+}
+
+.footer-text .footer-a2 {
+    color: #ff0000;
+    font-weight: bold;
+}
+
+.footer-text .imgSize img {
+    width: 90px;
+    height: 22px;
+    vertical-align: text-bottom;
+}
+
+[data-dpr="2"] .footer-text .imgSize img {
+    width: 180px;
+    height: 44px;
+}
+
+[data-dpr="3"] .footer-text .imgSize img {
+    width: 270px;
+    height: 66px;
+}
+
+.footer-text #changeImage img {
+    width: 124px;
+    height: 47px;
+    margin-top: 15px;
+}
+
+[data-dpr="2"] .footer-text #changeImage img {
+    width: 248px;
+    height: 94px;
+    margin-top: 30px;
+}
+
+[data-dpr="3"] .footer-text #changeImage img {
+    width: 372px;
+    height: 141px;
+    margin-top: 30px;
+}
+
+.back-top {
+    position: fixed;
+    right: 0;
+    bottom: 13px;
+    background: url(../../assets/img/backtop.png) no-repeat;
+    background-size: 60px auto;
+    width: 60px;
+    height: 36px;
+    text-indent: -9999px;
+    display: none;
+    z-index: 1000;
+}
+
+[data-dpr="2"] .back-top {
+    bottom: 26px;
+    background-size: 120px auto;
+    width: 120px;
+    height: 72px;
+}
+
+[data-dpr="3"] .back-top {
+    width: 180px;
+    height: 108px;
+    background-size: 180px auto;
+}
+
+/*动态提示盒子*/
+.tipBox1 {
+    width: 10rem;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-size: 15px;
+}
+
+[data-dpr="2"] .tipBox1 {
+    font-size: 30px;
+}
+
+[data-dpr="3"] .tipBox1 {
+    font-size: 45px;
+}
+
+.tipBox1 .text-content {
+    width: 8.6rem;
+    margin: auto;
+    background-color: #fff;
+    line-height: 0.7rem;
+    text-align: center;
+    clear: both;
+    position: fixed;
+}
+
+.tipBox1 .text-content p:first-child.header {
+    color: #ddd;
+    border-bottom: 1px solid #d9d9d9;
+    position: relative;
+    padding: 0.28rem 0;
+}
+
+.tipBox1 .text-content p:first-child.header em {
+    position: absolute;
+    right: 0.25rem;
+    top: 0.25rem;
+    background: url(../img/closed.png) center no-repeat;
+    -webkit-background-size: 1rem 1rem;
+    background-size: 0.385rem auto;
+    width: 0.385rem;
+    height: 0.385rem;
+}
+
+.tipBox1 .text-content .box-content p:first-child {
+    text-align: center;
+    color: red;
+    font-size: 14px;
+    width: 7.9rem;
+    margin: 0.5rem auto;
+}
+
+[data-dpr="2"] .text-content .box-content p:first-child {
+    font-size: 28px;
+}
+
+[data-dpr="3"] .text-content .box-content p:first-child {
+    font-size: 42px;
+}
+
+.tipBox1 .text-content .box-content p:last-child {
+    height: 1.6rem;
+    clear: both;
+    color: #ffffff;
+}
+
+.tipBox1 .text-content .box-content p:last-child span:first-child {
+    float: left;
+    background: #00b1fd;
+    margin-left: 0.4rem;
+    border-radius: 0.1rem;
+    height: 1rem;
+    width: 2.2rem;
+    text-align: center;
+    line-height: 1rem;
+}
+
+.tipBox1 .text-content .box-content p:last-child span:last-child {
+    float: right;
+    background: #5ac845;
+    margin-right: 0.4rem;
+    border-radius: 0.1rem;
+    height: 1rem;
+    width: 2.2rem;
+    text-align: center;
+    line-height: 1rem;
+}

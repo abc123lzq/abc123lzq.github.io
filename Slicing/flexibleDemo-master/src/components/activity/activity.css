@@ -1,0 +1,74 @@
+.activity {
+    width: 10rem;
+}
+
+.activity-content {
+    font-size: 15px;
+    width: 10rem;
+    margin-top: 0.227273rem;
+    background-color: #fff;
+}
+
+[data-dpr="2"] .activity-content{
+    font-size: 30px;
+}
+
+[data-dpr="3"] .activity-content{
+    font-size: 45px;
+}
+
+.activity-content .activity-agline{
+    width: 9.6rem;
+    margin: 0 auto;
+    line-height: 1.2rem;
+}
+.activity-content img {
+    width: 9.6rem;
+    display: block;
+    margin:0 auto;
+    padding: .2rem 0 0;
+}
+
+.activity-content .activity-time {
+    border-top: 1px solid #ededed;
+}
+
+.activity-content .activity-time .for-the-time {
+    color: #999;
+
+}
+.activity-content .activity-time button{
+    border: 1px solid #29abe2;
+    background-color: #fff;
+    border-radius: 0.15rem;
+    padding: 0.15rem;
+}
+.activity-content .activity-time button a{
+    color: #29abe2;
+    font-size: 13px;
+}
+[data-dpr="2"] .activity-content .activity-time button a {
+    font-size: 26px;
+}
+
+[data-dpr="3"] .activity-content .activity-time button a{
+    font-size: 39px;
+}
+
+.load-more{
+    text-align: center;
+    background-color: #ededed;
+}
+
+.load-more p{
+    padding: 0.4rem 0;
+    font-size: 14px;
+    color: #999;
+}
+[data-dpr="2"] .load-more p {
+    font-size: 28px;
+}
+
+[data-dpr="3"] .load-more p{
+    font-size: 42px;
+}

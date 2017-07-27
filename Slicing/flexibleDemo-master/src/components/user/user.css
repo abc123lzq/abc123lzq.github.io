@@ -1,0 +1,151 @@
+.main {
+    width: 10rem;
+}
+
+.user-header {
+    width: 10rem;
+    background-color: #267ada;
+    color: #ffffff;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    text-align: center;
+    font-size: 16px;
+    position: relative;
+}
+
+[data-dpr="2"] .user-header {
+    font-size: 32px;
+}
+
+[data-dpr="3"] .user-header {
+    font-size: 48px;
+}
+
+.user-header img {
+    width: 0.49rem;
+    float: left;
+    position: absolute;
+    top: 29.9%;
+    left: 3%;
+}
+
+.user-center {
+    background-color: #fff;
+    width: 9.4rem;
+    height: 3rem;
+    margin: 0.2rem auto;
+    position: relative;
+}
+
+.user-center .user-ico {
+    width: 2.3rem;
+    height: 2.3rem;
+    border-radius: 50%;
+    border: 1px solid #e0e0e0;
+    padding: 0.1rem;
+    position: absolute;
+    top: 0.2rem;
+    left: 0.2rem;
+}
+
+.user-center .user-ico img {
+    border-radius: 50%;
+    width: 2.3rem;
+    height: 2.3rem;
+}
+
+.user-center .your-name {
+    position: absolute;
+    left: 2.9rem;
+    font-size: 15px;
+    color: #333;
+    font-weight: bold;
+    height: 0.6rem;
+    top: 50%;
+    margin-top: -0.3rem;
+}
+
+[data-dpr="2"] .user-center .your-name {
+    font-size: 30px;
+}
+
+[data-dpr="3"] .user-center .your-name {
+    font-size: 45px;
+}
+
+.user-list {
+    width: 9.4rem;
+    margin: 0 auto;
+    font-size: 14px;
+    color: #4c4c4c;
+}
+
+[data-dpr="2"] .user-list {
+    font-size: 28px;
+}
+
+[data-dpr="3"] .user-list {
+    font-size: 42px;
+}
+
+.user-list p {
+    width: 9.4rem;
+    background-color: #ffffff;
+    height: 1.4rem;
+    margin: 0.3rem 0;
+}
+
+.user-list img {
+    width: 1rem;
+    height: 1rem;
+    margin: .2rem;
+    vertical-align: middle;
+}
+
+.user-list .user-data {
+    width: 9.4rem;
+    background-color: #fff;
+}
+
+.user-list .user-data li {
+    width: 9.4rem;
+    background-color: #ffffff;
+    height: 1.4rem;
+}
+
+.user-list .user-data li + li {
+    border-top: 1px solid #ebebeb;
+}
+
+.user-list .user-data li .msg-tip {
+    position: relative;
+    display: inline-block;
+}
+
+.user-list .user-data li .msg-tip em {
+    width: 0.25rem;
+    height: 0.25rem;
+    background-color: #ff3838;
+    border-radius: 50%;
+    position: absolute;
+    right: -0.2rem;
+    top: -0.1rem;
+}
+
+.user-list .extent {
+    text-align: center;
+    line-height: 1.4rem;
+}
+
+.user-list .extent a {
+    color: #f50000;
+    font-size: 16px;
+}
+
+[data-dpr="2"] .user-list .extent a {
+    font-size: 32px;
+}
+
+[data-dpr="3"] .user-list .extent a {
+    font-size: 48px;
+}
